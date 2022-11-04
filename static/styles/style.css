@@ -5,7 +5,7 @@
 
 .topnav a {
     float: left;
-    color: slategray;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -18,9 +18,9 @@
 }
 
 .topnav a.active {
-    background-color: #ffd3b5;
+    background-color: #ce94bc;
 
-    color: slategray;
+    color: rgb(0, 0, 0);
 }
 
 body {
@@ -44,5 +44,5 @@ h2,
 p,
 tr,
 td {
-    color: slategray;
+    color: rgb(0, 0, 0);
 }
