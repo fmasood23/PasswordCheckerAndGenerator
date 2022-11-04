@@ -1,0 +1,48 @@
+.topnav {
+    overflow: hidden;
+    background-color: #ce94bc;
+}
+
+.topnav a {
+    float: left;
+    color: slategray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #dbbfdb;
+    color: slategray;
+}
+
+.topnav a.active {
+    background-color: #ffd3b5;
+
+    color: slategray;
+}
+
+body {
+    background-color: #b6b5db;
+}
+
+button {
+    background-color: #877bae;
+    color: slategray;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#parent>* {
+    margin-top: 10px;
+}
+
+label,
+h2,
+p,
+tr,
+td {
+    color: slategray;
+}
