@@ -19,8 +19,12 @@ def goToMainPage():
 def goToLearnPage():
     return render_template('learnPage.html')
 
-@app.route('/strength_checker')
+@app.route('/strength_checker', methods=('GET', 'POST'))
 def gotToStrengthCheckerPage():
+    if request.method == 'POST':
+        password = request.form.get("password")
+        print(password)
+      
     return render_template('strengthCheckerPage.html')
 
 @app.route('/pass_generator')
