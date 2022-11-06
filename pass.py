@@ -21,11 +21,12 @@ def goToLearnPage():
 
 @app.route('/strength_checker', methods=('GET', 'POST'))
 def gotToStrengthCheckerPage():
+    output=[]
     if request.method == 'POST':
         password = request.form.get("password")
-        print(password)
+        output=[password, password]
       
-    return render_template('strengthCheckerPage.html')
+    return render_template('strengthCheckerPage.html', output=output)
 
 @app.route('/pass_generator')
 def gotToPassGeneratorPage():
