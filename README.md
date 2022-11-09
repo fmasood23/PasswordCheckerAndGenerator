@@ -1,4 +1,4 @@
-# PasswordCheckerAndGenerator
+# Password Checker And Generator - CS 166
 
 Commands to run to open python in virtual environment: (make sure to pip install flask)
 - python -m venv my_env
