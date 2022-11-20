@@ -15,8 +15,46 @@
 
     <h2>Password Generator Page</h2>
 
-    <title>Password Strength Checker</title>
+    <title>Password Generator</title>
 
+
+    <form method="POST" action="pass_generator">
+        <label for="inputtext">Enter your birth city:</label>
+        <input type="text" name="birthcity" placeholder="Enter birth city" class="birthcity"></input>
+        <br />
+        <label for="inputtext">Enter your birth month:</label>
+        <select name="birthmon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <br />
+        <label for="inputtext">Enter your childhood hero:</label>
+        <input type="text" name="hero" placeholder="Enter childhood hero" class="hero"></input>
+        <br />
+        <label for="inputtext">Enter your favorite food:</label>
+        <input type="text" name="food" placeholder="Enter favorite food" class="food"></input>
+        <br />
+        <label for="inputtext">Enter your favorite color:</label>
+        <input type="text" name="color" placeholder="Enter favorite color" class="color"></input>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% for x in output1 %}
+
+    <p>{{ x }}</p>
+
+    {% endfor %}
 
 </body>
 

@@ -78,6 +78,16 @@ def gotToStrengthCheckerPage():
       
     return render_template('strengthCheckerPage.html', output=output)
 
-@app.route('/pass_generator')
+@app.route('/pass_generator', methods=('GET', 'POST'))
 def gotToPassGeneratorPage():
-    return render_template('passGeneratorPage.html')
+  output1=[]
+  if request.method == 'POST':
+    city = request.form.get("birthcity")
+    mon = request.form.get("birthmon")
+    hero = request.form.get("hero")
+    food = request.form.get("food")
+    color = request.form.get("color")
+
+    #temp output for now  
+    output1 = [city, mon, hero, food, color]
+  return render_template('passGeneratorPage.html', output1=output1)
