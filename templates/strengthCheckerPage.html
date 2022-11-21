@@ -24,13 +24,17 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    <br>
+
     <h3>Password vulnerabilities:</h3>
+    <ul>
+        {% for x in output %}
 
-    {% for x in output %}
+        <li>{{ x }}</li>
 
-    <p>{{ x }}</p>
+        {% endfor %}
+    </ul>
 
-    {% endfor %}
 </body>
 
 </html>

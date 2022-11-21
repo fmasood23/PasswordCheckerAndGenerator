@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, jsonify 
 from flask_cors import CORS 
+import pandas as pd
+import numpy as np
 
 
 app = Flask(__name__)
@@ -42,6 +44,46 @@ def check_unique_chars(password):
     return True
   return False
 
+def checkIfInList(word):
+  csv = pd.read_csv("https://raw.githubusercontent.com/pkLazer/password_rank/master/4000-most-common-english-words-csv.csv")
+  csv.columns = ['Word']
+
+  words = np.array(csv.values.tolist())
+  common_words = words.ravel().tolist()
+
+  if (word.lower() in common_words):
+    return True
+  return False
+
+def cleanStr(word):
+  symbols = "!@#$%^&*()-+?_=,<>/"
+  list1 =[]
+  val = ""
+  for i in word:
+    if ((not i.isdigit()) and (i not in symbols)):
+      val = val + i
+    else:
+      val+="1" #delimiting character to seperate words 
+  list1 = val.split("1")
+  list2 = [i for i in list1 if i != ""]
+  return list2
+
+def checkAll(word):
+  if checkIfInList(word):
+    return True
+  else:
+    val = cleanStr(word)
+    for i in val:
+      if checkIfInList(i):
+        return True
+  return False
+
+def reverseVal(word):
+  val = word[::-1]
+  if checkAll(val):
+    return True
+  return False
+
 def check_password(password):
   arr = []
   if not check_length(password):
@@ -56,6 +98,10 @@ def check_password(password):
     arr.append("Password does not contain any digits")
   if not check_unique_chars(password):
     arr.append("Password does not meet the minimum number of unique characters")
+  if checkAll(password):
+    arr.append("Password contains a common word.")
+  if reverseVal(password):
+    arr.append("Password contains a reversed common word.")
   if(len(arr)==0):
     arr.append("Password has no vulnerabilities!")
   return arr
