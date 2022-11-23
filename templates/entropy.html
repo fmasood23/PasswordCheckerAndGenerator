@@ -14,11 +14,21 @@
         <a href="/entropy">Entropy Check</a>
     </div>
 
-    <h2>Learning Page</h2>
+    <h2>Entropy</h2>
 
     <title>Password Strength Checker</title>
 
+    <label for="inputtext">Enter your password:</label>
 
-</body>
+    <form method="POST" action="entropy">
+        <input type="text" name="entropyPass" placeholder="Enter password" class="entropyPass"></input>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% for x in output2 %}
+
+    <p>{{ x }}</p>
+
+    {% endfor %}
 
 </html>

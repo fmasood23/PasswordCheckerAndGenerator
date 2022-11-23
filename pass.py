@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS 
 import pandas as pd
 import numpy as np
+import random
 
 
 app = Flask(__name__)
@@ -84,6 +85,16 @@ def reverseVal(word):
     return True
   return False
 
+def cleanStr(password):
+  pass1 = password
+  if("'" in password):
+    pass1 = pass1.replace("'", "")
+  elif('"' in password):
+    pass1 = pass1.replace('"', "")
+
+  return pass1
+
+
 def check_password(password):
   arr = []
   if not check_length(password):
@@ -99,9 +110,9 @@ def check_password(password):
   if not check_unique_chars(password):
     arr.append("Password does not meet the minimum number of unique characters")
   if checkAll(password):
-    arr.append("Password contains a common word.")
+    arr.append("**Warning** Password contains a common word. Check password randomness and access 'About' tab to learn more.")
   if reverseVal(password):
-    arr.append("Password contains a reversed common word.")
+    arr.append("**Warning** Password contains a reversed common word. Check password randomness and access 'About' tab to learn more.")
   if(len(arr)==0):
     arr.append("Password has no vulnerabilities!")
   return arr
@@ -120,6 +131,7 @@ def gotToStrengthCheckerPage():
     output=[]
     if request.method == 'POST':
         password = request.form.get("password")
+        password = cleanStr(password)
         output=check_password(password)
       
     return render_template('strengthCheckerPage.html', output=output)
@@ -128,12 +140,17 @@ def gotToStrengthCheckerPage():
 def gotToPassGeneratorPage():
   output1=[]
   if request.method == 'POST':
-    city = request.form.get("birthcity")
-    mon = request.form.get("birthmon")
-    hero = request.form.get("hero")
-    food = request.form.get("food")
-    color = request.form.get("color")
+    charLen = request.form.get("length")
+    output1.append(charLen)
 
     #temp output for now  
-    output1 = [city, mon, hero, food, color]
   return render_template('passGeneratorPage.html', output1=output1)
+
+@app.route('/entropy',  methods=('GET', 'POST'))
+def goToEntropyPage():
+  output2=[]
+  if request.method == 'POST':
+    entropyPass = request.form.get("entropyPass")
+    output2.append(entropyPass)
+
+  return render_template('entropy.html', output2 = output2)
