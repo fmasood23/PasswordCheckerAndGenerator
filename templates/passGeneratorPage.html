@@ -10,8 +10,8 @@
         <a class="active" href="/">Home</a>
         <a href="/learn">About</a>
         <a href="/strength_checker">Check Password Strength</a>
-        <a href="/pass_generator">Generate a Password</a>
         <a href="/entropy">Entropy Check</a>
+        <a href="/pass_generator">Generate a Password</a>
     </div>
 
     <h2>Password Generator Page</h2>
@@ -29,7 +29,36 @@
         <button type="submit" class="btn btn-primary">Generate A Password!</button>
     </form>
 
+    <!-- <p> {% block content %} {{ content1 }} {% endblock %} </p> -->
+    <h3>Suggested Password:</h3>
     {% for x in output1 %}
+
+    <p>{{ x }}</p>
+
+    {% endfor %}
+
+    <br />
+
+    <h3>Sequence of Words to Remember:</h3>
+    {% for x in output2 %}
+
+    <p>{{ x }}</p>
+
+    {% endfor %}
+
+    <br />
+
+    <h3>Position of Symbol:</h3>
+    {% for x in output3 %}
+
+    <p>{{ x }}</p>
+
+    {% endfor %}
+
+    <br />
+
+    <h3>Position of Capitalized Letter in Original Word:</h3>
+    {% for x in output4 %}
 
     <p>{{ x }}</p>
 
