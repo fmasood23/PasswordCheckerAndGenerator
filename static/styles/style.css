@@ -46,3 +46,12 @@ tr,
 td {
     color: rgb(0, 0, 0);
 }
+
+a.button {
+    background-color: #877bae;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
