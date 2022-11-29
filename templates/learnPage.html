@@ -14,10 +14,261 @@
         <a href="/pass_generator">Generate a Password</a>
     </div>
 
-    <h2>Learning Page</h2>
-
     <title>Password Strength Checker</title>
 
+    <h2>What Makes a Strong Password?</h2>
+
+    <p>
+        Great question! A strong password is defined by one key characteristic: randomness! Then, why do all the
+        websites outline the following requirements for a password: 1 uppercase letter, 1 lowercase letter, 1 special
+        character, 1 number, and a minimum length of 8 characters. Many believe that this makes for a stronger password
+        because it’s more “complex” and is hard for a human to guess – but, this complexity actually makes it easier for
+        a computer or a program to crack your password.
+    </p>
+
+    <p>
+        In fact, it is impossible for the human brain to choose a password that is truly random. When we try to identify
+        a password that is both “complex” and easy for us to remember, we often end up following a prescribed pattern
+        that is very easy for the computer to guess. As the XKCD comic suggests, a password such as <u>“correct horse
+            battery staple”</u> chosen at random is stronger than a password that follows all the so-called password
+        requirements to a T. To the human mind, “Tr0ub4dor&3” will look like the stronger password. However, it is
+        actually extremely easy for a computer to guess. This apparent contradiction can be further understood through
+        the concept of entropy.
+    </p>
+
+    <h2>What is Entropy?</h2>
+
+    <p>
+        Entropy is a measure of the randomness of a password (i.e., how many different possibilities an attacker must
+        consider to crack your password). Length is one of the primary factors defining entropy; with more length,
+        there’s more room for randomness. Entropy can also be increased by adding more characters to the mix – i.e.,
+        lowercase letters, uppercase letters, numbers, and symbols. But, not the way a common sign up form suggests – to
+        be truly strong, the password must be <u>>AS RANDOM AS POSSIBLE</u>. The more we try to build a
+        structure/pattern/uniformness to the random password generation, the weaker our password becomes in the face of
+        password crackers and other tools. That said, a truly random password such as “5&2CcKMvD8vy” is not something
+        that the average internet user can remember, recollect, and use. As a result, we are left with two seemingly
+        contrasting ideas: guessability and memorability.
+    </p>
+
+    <h2>Balancing Guessability & Memorability</h2>
+
+    <p>
+        The average American internet user is projected to have 300 accounts protected by passwords by 2022 – an
+        impossible number of passwords to remember and recollect. As such, we recommend that you focus on remembering
+        three to four passwords that are absolutely critical (i.e., Apple ID, Gmail, and laptop password) and use a
+        secure, trusted password manager to aid with the rest.
+    </p>
+
+    <p>
+        Now, let’s talk about how to create strong and memorable passwords for those three to four critical accounts
+        that you will have to memorize. The best password is one that is hard for an attacker to crack but easy for a
+        user to remember. Passwords that we remember and recollect easily end up connected to us in some way; for
+        instance, your mother’s maiden name may be quite obscure, but it may also be one of the first things any decent
+        hacker may try. The strength of a password lies in its randomness, but even the strongest password can fail if
+        you (1) cannot remember and recollect it as necessary or (2) rely on poor password usage strategies. This
+        includes everything from writing it down on a sticky note, reusing the same strong password in multiple places,
+        and saving passwords in unsecure locations. Theoretically, a password “5&2CcKMvD8vy” is strong, and a password
+        “2y5!*iq8e!g#jlgR2enywnj14GOak6@*” is stronger, but neither is intuitive or memorable. So, how can we create a
+        password that is both strong and memorable?
+    </p>
+
+    <p>
+        Our answer is <a href="https://std.com/~reinhold/diceware.html">Diceware</a>. Diceware is a strategy to choose
+        passwords based on dice rolls. The
+        strength of this
+        strategy relies on the true randomness generated through several independent dice rolls. Under this strategy,
+        you must roll an ordinary dice five times and use the resulting sequence of values to choose a word from the
+        Diceware list. The original Diceware list is comprised of 7776 short words, easy to remember abbreviations, and
+        special characters. Here’s a short excerpt of a Diceware list:
+    </p>
+
+    <table>
+        <tr>
+            <td>16655</td>
+            <td>clause</td>
+        </tr>
+        <tr>
+            <td>16656</td>
+            <td>claw</td>
+        </tr>
+        <tr>
+            <td>16661</td>
+            <td>clay</td>
+        </tr>
+        <tr>
+            <td>16662</td>
+            <td>clean</td>
+        </tr>
+        <tr>
+            <td>16663</td>
+            <td>clear</td>
+        </tr>
+    </table>
+
+    <p>
+        The strategy recommends a password with a minimum length of 16 to 32 characters (approximately, 4-5 words as
+        each word in the list is an average of 4.2 letters long). As such, a user may re-roll their dice 5 times to
+        select an additional three to four words to add to their password. The resulting password may resemble the
+        following: correct horse battery staple. While these are common dictionary words, when generated randomly, the
+        resulting entropy is 164.7, which makes up quite the strong password. More importantly, in contrast to a
+        password like “2y5!*iq8e!g#jlgR2enywnj14GOak6@*”, “correct horse battery staple” is much more memorable. You
+        will have to put some time into memorizing it, but once memorized this will serve you much better than your
+        mother’s maiden name, “complex” password like @ppl3s!$!, and is definitely more memorable than “5&2CcKMvD8vy” in
+        the future.
+    </p>
+
+    <h2>How Can [This Website] Help You?</h2>
+
+    <p>
+        This website offers three unique tools:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Password Checker:</strong> This tool will help you check whether you are creating a password that
+            uses a large pool
+            of characters (i.e., a large character set), an appropriate password length, and avoiding common dictionary
+            words.
+        </li>
+        <li>
+            <strong>Password Generator:</strong> This tool will help you generate a password that meets the standards we
+            discussed in our
+            earlier sections: a password that is easy to memorize and difficult to crack. Our generator relies on a
+            Diceware-based strategy, but also increases the character set to include uppercase letters, digits, and 33
+            standard keyboard symbols. The generator also shows a break-down of the words, capitalization, and
+            symbol-inserts so that a user may easily commit it to memory.
+        </li>
+        <li>
+            <strong>Password Entropy Calculator:</strong> This tool will help you check the entropy (i.e., the unit of
+            randomness) in
+            your password. Higher entropy values are associated with stronger passwords. A password with an entropy of
+            25 to 35 bits is considered average; 70 to 85 bits is considered good with approximately 100 bits considered
+            strong. We recommend aiming for a password with at least 100 bits of entropy. Keep in mind that our entropy
+            calculator assumes that you generated your password randomly. If you did not generate your password
+            randomly, our calculator is likely to exaggerate the strength of your password.
+        </li>
+    </ul>
+
+    <h2>How Does Our Password Checker Work?</h2>
+
+    <p>
+        Our password checker operates by checking to see if an entered password satisfies the following requirements:
+    </p>
+
+    <ul>
+        <li>
+            The password is at least 12 characters long
+        </li>
+        <li>
+            The password contains at least one capital letter, symbol, and number
+        </li>
+        <li>
+            The password contains a sufficient number of unique characters
+        </li>
+        <li>
+            The password does not contain a common dictionary word
+        </li>
+        <li>
+            The password does not contain a reversed common dictionary word
+        </li>
+    </ul>
+
+    <p>This allows us to follow the requirements of most modern websites and also protect passwords against dictionary
+        attacks. A dictionary attack is when an attacker conducts a brute force run through common words and phrases to
+        decode a password. Passwords must be invulnerable to dictionary attacks.
+    </p>
+
+    <p>
+        After each check is completed, our strength checker will return all vulnerabilities in the password to the
+        screen.
+    </p>
+
+    <h2>How Does Our Password Generator Work?</h2>
+
+    <p>
+        Through our password generator, you can generate a password that is either 14 to 20 characters, 20 to 28
+        characters, or 28 to 32 characters long. Our password generator is based on <a
+            href="https://std.com/~reinhold/diceware.html">Diceware</a>, a strategy to choose
+        passwords through several dice rolls. We use python’s in-built random() function to simulate 4 six-sided dice
+        rolls and match the corresponding values to the Electronic Frontier Foundation’s (EFF) <a
+            href="https://www.eff.org/files/2016/09/08/eff_short_wordlist_1.txt">wordlist</a>. This wordlist
+        is a modified version of the original Diceware list; it is made up of shorter words and excludes special
+        characters and easy-to-remember abbreviations. We adopted the modified wordlist from the EFF because the
+        original Diceware list included special characters and abbreviations that added unnecessary complexity to our
+        password generation strategy. Each word randomly chosen from this wordlist yields an additional 10.3 bits of
+        entropy. Selecting four to five words from this list based on the user’s chosen length serves as the base for
+        our password generation strategy. Given that most modern websites require the inclusion of numbers, symbols, and
+        also capital letters in passwords, we inserted all of the mentioned into each word at the same random index.
+        While the original Diceware strategy discusses a different way for adding special characters or numbers, we
+        decided on this way because it allows for more memorable passwords while still retaining some degree of
+        randomness.
+    </p>
+
+    <p>
+        Upon selecting a length and clicking generate, a user will see the following populate their screen: a generated
+        password, the original randomized word list, the position of the inserted symbol, and the position of the
+        capitalized letters. This is all provided back to the user to ensure that the user (1) understands how the
+        password was generated and (2) can better remember and recollect their password.
+    </p>
+
+    <p>
+        For example:
+    </p>
+
+    <p>
+        If the user selects the option of “28-32 characters (Recommended)” and clicks the button to generate a password,
+        the system will provide the following information:
+    </p>
+    <p>
+        <strong>Suggested Password:</strong>
+    </p>
+
+    <p>
+        Wa.ter65Po.lo66Ta.lon67Bl.ank68
+    </p>
+
+    <p>
+        <strong>Sequence of Words to Remember:</strong>
+    </p>
+
+    <p>
+        water
+    </p>
+    <p>
+        polo
+    </p>
+    <p>
+        talon
+    </p>
+    <p>
+        blank
+    </p>
+
+    <p>
+        <strong>Position of Capitalized Letter:</strong>
+    </p>
+
+    <p>1</p>
+
+    <p>
+        <strong>Position of Symbol:</strong>
+    </p>
+
+    <p>3</p>
+
+    <p>
+        The system generated four random words using the Diceware technique. Each word concatenated would look like:
+        “waterpolotalonblank”. Randomly generated numbers are inserted in an increasing order at the end of each word as
+        such: “water65polo66talon67blank68”. The position of the capitalized letter (1) and symbol (3) are also randomly
+        generated. Using the first letter of every word as the capital provides: “Water65Polo66Talon67Blank68”. The
+        randomly generated symbol is inserted at the third position of each word: “Wa.ter65Po.lo66Ta.lon67Bl.ank68”.
+    </p>
+
+    <p>
+        This is the final generated password. This feature provides the sequence of words to remember, the position of
+        the capitals, and the position of the symbols as a method to make remembering this strong password easier for
+        our users.
+    </p>
 
 </body>
 

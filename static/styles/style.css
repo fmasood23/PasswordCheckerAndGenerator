@@ -55,3 +55,9 @@ a.button {
     padding: 10px;
     border-radius: 4px;
 }
+
+table {
+    border: 1px solid;
+    margin-left: 45%;
+    margin-right: 45%;
+}
