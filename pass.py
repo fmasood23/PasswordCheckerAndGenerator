@@ -9,10 +9,8 @@ from urllib.request import urlopen
 
 app = Flask(__name__)
 app.static_folder = 'static'
-# CORS(app)
 
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0', port=5000)
+#password checker backend
 
 def check_length(password):
   if len(password) >= 12:
@@ -119,6 +117,8 @@ def check_password(password):
     arr.append("Password has no vulnerabilities!")
   return arr
 
+#password generator backend
+
 def create_dict():
   words_dict = {}
   file = urlopen("https://www.eff.org/files/2016/09/08/eff_short_wordlist_1.txt").read().decode('utf-8')
@@ -165,6 +165,9 @@ def generate_password(length):
 
   return [password, used_words, (cap + 1), (breakpoint + 1), start_digit]
 
+
+#entropy backend
+
 def calculate_entropy(password):
   length = len(password)
   characterSetSize = 0
@@ -186,6 +189,8 @@ def calculate_entropy(password):
   return [calculation, length, characterSet, characterSetSize]
 
 
+
+#app routing
 
 @app.route('/')
 def goToMainPage():
