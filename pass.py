@@ -18,7 +18,7 @@ def check_length(password):
   return False
 
 def check_symbol(password):
-  symbols = "!@#$%^&*()-+?_=,<>/"
+  symbols = "!\@#$%^&*()-+?_=,<>/'.:;[]`{}|~\" "
   if any(ch in symbols for ch in password):
     return True
   else:
@@ -57,7 +57,7 @@ def checkIfInList(word):
   return False
 
 def cleanStr(word):
-  symbols = "!@#$%^&*()-+?_=,<>/"
+  symbols = "!\@#$%^&*()-+?_=,<>/'.:;[]`{}|~\" "
   list1 =[]
   val = ""
   for i in word:
@@ -167,7 +167,6 @@ def generate_password(length):
 
 
 #entropy backend
-
 def calculate_entropy(password):
   length = len(password)
   characterSetSize = 0
