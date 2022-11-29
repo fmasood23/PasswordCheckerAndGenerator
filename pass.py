@@ -85,7 +85,7 @@ def reverseVal(word):
     return True
   return False
 
-def cleanStr(password):
+def cleanPass(password):
   pass1 = password
   if("'" in password):
     pass1 = pass1.replace("'", "")
@@ -206,7 +206,7 @@ def gotToStrengthCheckerPage():
     output=[]
     if request.method == 'POST':
         password = request.form.get("password")
-        password = cleanStr(password)
+        password = cleanPass(password)
         output=check_password(password)
       
     return render_template('strengthCheckerPage.html', output=output)
