@@ -56,8 +56,17 @@ a.button {
     border-radius: 4px;
 }
 
-table {
+.t1 {
     border: 1px solid;
     margin-left: 45%;
     margin-right: 45%;
+}
+
+.t2,
+.td2,
+.th2 {
+    border: 1px solid;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
 }

@@ -82,7 +82,7 @@
         special characters. Here’s a short excerpt of a Diceware list:
     </p>
 
-    <table>
+    <table class="t1">
         <tr>
             <td>16655</td>
             <td>clause</td>
@@ -269,6 +269,108 @@
         the capitals, and the position of the symbols as a method to make remembering this strong password easier for
         our users.
     </p>
+
+    <h2>How Does Our Password Entropy Calculator Work</h2>
+
+    <p>Through our password entropy calculator, you can check the entropy of your password. Entropy is a measure of the
+        randomness of a password (i.e., how many different possibilities an attacker must consider to crack your
+        password). Our entropy calculator calculates entropy through the following formula: Entropy (E) = L x
+        log<sub>2</sub>(R).
+    </p>
+
+    <p>
+        L represents the length of the password, and R represents the size of the pool of characters. Entropy-wise, you
+        can make your password stronger by either (1) increasing the length or (2) expanding the character set (i.e.,
+        adding uppercase letters, digits, symbols). However, a longer password with only lowercase characters can be far
+        stronger than a short and complex password; this is also obvious from the mathematical formula.
+    </p>
+
+    <p>
+        Our entropy calculator allows users to enter a password, and outputs the resulting entropy value. To make sense
+        of your value, please know how your password’s entropy compares in the following chart:
+    </p>
+
+    <table class="t2">
+        <tr>
+            <th class="th2">Entropy (in bits)</th>
+            <th class="th2">Strength</th>
+        </tr>
+        <tr>
+            <td class="td2">25-30 bits</td>
+            <td class="td2">weak</td>
+        </tr>
+        <tr>
+            <td class="td2">60-80 bits</td>
+            <td class="td2">average</td>
+        </tr>
+        <tr>
+            <td class="td2">~100 bits</td>
+            <td class="td2">strong</td>
+        </tr>
+        <tr>
+            <td class="td2">>100 bits</td>
+            <td class="td2">very strong (recommended)</td>
+        </tr>
+    </table>
+
+    <p>
+        We recommend that you prioritize length to increase the strength of your password; it is much more effective
+        than increasing your character set by 10. That said, it is important to note that a high entropy value alone
+        does not guarantee a strong password. We provide an entropy calculator to help you evaluate the strength of the
+        password you randomly generated using your own Diceware or our password generator. Entropy is a measure of
+        randomness, and our entropy calculator assumes that your password <u>was generated randomly</u>. If you use a
+        password
+        that is relevant to you personally, reuse a password, or use a leaked password, your password’s actual entropy
+        value is likely much, much lower. Please be cautious as you use our entropy calculator to help you generate
+        strong, secure passwords.
+    </p>
+
+    <h2>Summary</h2>
+
+    <ol>
+        <li><strong>DO NOT:</strong> reuse passwords or use passwords that are tied to you personally regardless of how
+            obscure they are.
+        </li>
+        <li><strong>DO:</strong> use password managers to store the majority of your day-to-day passwords, and memorize
+            the few crucial
+            ones that you will need (Gmail, Apple ID, laptop password).</li>
+        <li><strong>DO NOT:</strong> use common dictionary words as password unless they were generated randomly.</li>
+        <li><strong>DO:</strong> generate your password randomly; randomness is key to a strong password. Diceware is
+            one of the most
+            prominent strategies to truly random passwords that are also memorable. Feel free to try our generator that
+            uses the same strategy!
+        </li>
+        <li><strong>DO NOT:</strong> rely primarily on our entropy checker to verify your password’s strength; please
+            know that the true
+            measure of strength lies with randomness.
+        </li>
+        <li><strong>DO:</strong> increase the size of your password to increase their strength; once again, be mindful
+            that this strategy
+            only works if you avoid common dictionary words and use random password generation. </li>
+    </ol>
+
+    <h2>References</h2>
+
+    <a
+        href="https://learning.oreilly.com/library/view/take-control-of/9781492066408/">https://learning.oreilly.com/library/view/take-control-of/9781492066408/</a>
+    <p></p>
+
+    <a href="https://std.com/~reinhold/diceware.html">https://std.com/~reinhold/diceware.html</a>
+    <p></p>
+
+    <a
+        href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases">https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases</a>
+    <p></p>
+
+    <a
+        href="​​https://security.stackexchange.com/questions/6095/xkcd-936-short-complex-password-or-long-dictionary-passphrase/6096#6096">​​https://security.stackexchange.com/questions/6095/xkcd-936-short-complex-password-or-long-dictionary-passphrase/6096#6096</a>
+    <p></p>
+
+    <a
+        href="https://www.omnicalculator.com/other/password-entropy">https://www.omnicalculator.com/other/password-entropy</a>
+    <p></p>
+
+    <a href="https://blog.dashlane.com/world-password-day">https://blog.dashlane.com/world-password-day</a>
 
 </body>
 
